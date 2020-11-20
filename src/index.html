@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>SPORTify</title>
+
 </head>
 <body>
     <div class="wrapper"> 
@@ -23,14 +29,16 @@
             <div class="nav-title">
                 <h1>SPORTify</h1>
             </div>
+            <!-- <p class="time"> Time: </p> -->
+            <p class="nav-time">
+              
+            </p>
         
             <div class="nav-menu">
                 <ul>
-                    <li>Home</li>
-                    <li>Blog</li>
-                    <li>Services</li>
-                    <li>Demo</li>
-                    <li>About</li>
+                    <a href="/src/index.html"><li>Home</li></a>
+                    <a href="/src/pages/products/products.html"><li>Products</li></a>
+                    <a href="/src/pages/location/location.html"><li>Location</li></a>
                 </ul>
             </div>
         </div>
@@ -41,7 +49,7 @@
               <h1>lectus mauris ultrices eros in</h1>
               <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
                   magna aliqua. Morbi leo urna molestie at elementum eu facilisis.</p>
-              <a href="/" class="button">Buy Now</a>
+              <a href="./pages/products/products.html" class="button">Buy Now</a>
             </div>
             <div class="block">
               <img src="../images/hero.png" alt="An illustration of me in profile">
@@ -53,5 +61,15 @@
           <small>All content &copy; Gautam Dhamija.</small>
         </footer>
       </div>
+      <script>
+
+      var today = new Date();
+      var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+      var time = today.getHours() + ":" + today.getMinutes();
+      // alert(date+"   "+time);
+      $(".nav-time").append(date+" "+time)
+        
+      
+    </script>
 </body>
 </html>
