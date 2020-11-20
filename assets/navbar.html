@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+	 	padding: 0px;
+	 	margin: 0px;
+	 	box-sizing: border-box;
+	 }
+
+	 .nav{
+	 	background: black;
+	 	color: white;
+	 	height: 70px;
+	 	font-family: sans-serif;
+
+	 	display: flex;
+	 	flex-wrap:wrap;
+	 	align-items: center;
+	 }
+
+	 .nav-title{
+	 	width: 30%;
+	 	background: red;
+	 	padding: 16px 40px;
+	 	text-align: center;
+
+	 }
+
+	 .nav-menu{
+	 	width: 70%;
+	 }
+
+	 .nav-menu ul{
+	 	display: flex;
+	 	justify-content: flex-end;
+	 }
+
+	 .nav-menu ul li{
+	 	padding: 10px 20px;
+	 	color: #ccc;
+	 	font-size: 20px;
+	 	list-style-type: none;
+	 	cursor: pointer;
+	 }
+
+	 .nav-menu ul li:hover{
+	 	color: #fff;
+	 	font-weight: bold;
+	 }
+
+    /*style for responsive menu*/
+
+    @media screen and (max-width:1000px){
+    	.nav{
+    		height: auto;
+    	}
+    	.nav .nav-title{
+    		text-align: left;
+    		width: 100%;
+    	}
+
+    	.nav .nav-menu{
+    		width: 100%;
+    	}
+    	.nav .nav-menu ul{
+    		justify-content: space-around;
+    	}
+
+    	.nav .nav-menu ul li{
+    		width: 20%;
+    		padding: 10px 0px;
+    		text-align: center;
+    		font-size: 16px;
+    	}
+    }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-title">
+            <h1>Web Zone</h1>
+        </div>
+    
+        <div class="nav-menu">
+            <ul>
+                <li>Home</li>
+                <li>Blog</li>
+                <li>Services</li>
+                <li>Demo</li>
+                <li>About</li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
